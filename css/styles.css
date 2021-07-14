@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* colors */
+    --bg-color: hsl(210, 36%, 96%);
+
+    /* font families */
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: var(--ff-primary);
+}
+
+/* !class and ID */
+
+.section-center {
+    display: grid;
+    width: 93%;
+    margin: 15% auto;
+    max-width: 1200px;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.text-container {
+    display: grid;
+    margin: 30px 0;
+}
+
+.text-container > * {
+    margin: 20px 0;
+}
+
+.text-container aside h2 {
+    color: hsl(205, 72%, 37%);
+}
+
+.text-container aside p{
+    font-weight: bold;
+    letter-spacing: .12rem;
+    margin-top: 7px;
+}
+
+.text-container .info-text {
+    letter-spacing: .05rem;
+}
+
+.countdown-container {
+    display: flex;
+    align-items: center;
+}
+
+.countdown-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
+    background: hsl(209, 61%, 16%);
+    color: white;
+}
+
+.countdown-container div:first-child {
+    margin-left: 0;
+}
+
+.countdown-container div:last-child {
+    margin-right: 0;
+}
+
+.countdown-container h3 {
+    font-size: 1.9rem;
+}
+.countdown-container p {
+    padding-top: 5px;
+}
+
+@media(min-width: 900px) {
+    .section-center {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .text-container {
+        margin: 0;
+    }
+}
