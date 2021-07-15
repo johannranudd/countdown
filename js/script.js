@@ -27,7 +27,7 @@ let countdown = setInterval(function() {
     secondCounter.innerHTML = seconds;
 
         if (timeBetween <= 0) {
-            countDownDate.setDate(countDownDate.getDate() + 1);
+            countDownDate.setDate(countDownDate.getDate() + 10);
         };
     
         const newDateToString = ` ${countDownDate.toDateString()} 12:00am`;
