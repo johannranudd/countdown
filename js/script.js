@@ -1,10 +1,10 @@
-const demo = document.querySelector('#demo');
 
-const countDownDate = new Date('July 24, 2021 15:37:25');
+const countDownDate = new Date('July 15, 2021 11:00:00');
 const daysCounter = document.querySelector('#days');
 const hoursCounter = document.querySelector('#hours');
 const minutesCounter = document.querySelector('#minutes');
 const secondCounter = document.querySelector('#seconds');
+const newDate = document.querySelector('#newDate');
 
 
 let countdown = setInterval(function() {
@@ -20,14 +20,17 @@ let countdown = setInterval(function() {
     const seconds = Math.floor(timeBetween % (1000 * 60) / 
     (1000));
     
-    // console.log(seconds);
     daysCounter.innerHTML = days;
     hoursCounter.innerHTML = hours;
     minutesCounter.innerHTML = minutes;
     secondCounter.innerHTML = seconds;
 
+        if (timeBetween <= 0) {
+            countDownDate.setDate(countDownDate.getDate() + 10);
+        };
+    
+        const newDateToString = ` ${countDownDate.toDateString()} 12:00am`;
+        newDate.innerHTML = newDateToString;
+    
 }, 1000);
-
-
-
 
