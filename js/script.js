@@ -1,5 +1,5 @@
 
-const countDownDate = new Date('July 15, 2021 12:16:20');
+const countDownDate = new Date('July 15, 2021 12:00:00');
 const daysCounter = document.querySelector('#days');
 const hoursCounter = document.querySelector('#hours');
 const minutesCounter = document.querySelector('#minutes');
