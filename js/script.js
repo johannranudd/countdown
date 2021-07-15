@@ -35,5 +35,5 @@ function startTimer() {
 window.addEventListener("load", function () {
   setInterval(function () {
     startTimer();
-  }, 0.1);
+  }, 0.01);
 });
